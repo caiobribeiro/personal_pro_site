@@ -2,16 +2,16 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class FrostedGlassBox extends StatelessWidget {
+  final double theWidth;
+  final double theHeight;
+  final dynamic theChild;
+
   const FrostedGlassBox({
     Key? key,
     required this.theWidth,
     required this.theHeight,
     required this.theChild,
   }) : super(key: key);
-
-  final theWidth;
-  final theHeight;
-  final theChild;
 
   @override
   Widget build(BuildContext context) {
@@ -43,14 +43,15 @@ class FrostedGlassBox extends StatelessWidget {
                 borderRadius: BorderRadius.circular(30),
                 border: Border.all(color: Colors.white.withOpacity(0.32)),
                 gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      //begin color
-                      Colors.white.withOpacity(0.15),
-                      //end color
-                      Colors.white.withOpacity(0.05),
-                    ]),
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    //begin color
+                    Colors.white.withOpacity(0.15),
+                    //end color
+                    Colors.white.withOpacity(0.05),
+                  ],
+                ),
               ),
             ),
             //child ==> the first/top layer of stack

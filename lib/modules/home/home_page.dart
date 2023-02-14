@@ -11,9 +11,26 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.blue,
-      bottomNavigationBar: ProBottomBar(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ProCustomButton(
+            buttonLeftIcon: Icons.arrow_back_ios_new,
+            buttonLabel: 'Projects',
+            buttonRightIcon: Icons.terminal,
+            buttonFunction: () {},
+          ),
+          ProCustomButton(
+            buttonLeftIcon: Icons.description,
+            buttonLabel: 'Curriculum',
+            buttonRightIcon: Icons.arrow_forward_ios,
+            buttonFunction: () {},
+          ),
+        ],
+      ),
+      bottomNavigationBar: const ProBottomBar(),
     );
   }
 }

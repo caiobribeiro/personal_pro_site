@@ -16,8 +16,8 @@ class _ProBottomBarState extends State<ProBottomBar> {
     return Padding(
       padding: const EdgeInsets.all(8),
       child: FrostedGlassBox(
-        theHeight: 90.0,
-        theWidth: 70.0,
+        theHeight: 90,
+        theWidth: 70,
         theChild: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -26,16 +26,16 @@ class _ProBottomBarState extends State<ProBottomBar> {
           unselectedItemColor: Colors.black38,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.description),
-              label: 'Curriculum',
+              icon: Icon(Icons.terminal),
+              label: 'Projects',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.terminal),
-              label: 'Projects',
+              icon: Icon(Icons.description),
+              label: 'Curriculum',
             ),
           ],
           currentIndex: _selected,

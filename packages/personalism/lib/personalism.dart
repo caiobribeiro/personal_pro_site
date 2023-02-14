@@ -1,3 +1,4 @@
 library personalism;
 
-export 'src/widgets/bottom_bar/pro_bottom_app_bar.dart';
+export 'src/widgets/pro_bottom_app_bar.dart';
+export 'src/widgets/pro_custom_button.dart';
