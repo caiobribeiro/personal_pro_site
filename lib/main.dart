@@ -1,21 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:personal_pro_site/modules/home/home_page.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:personal_pro_site/modules/app_module.dart';
+import 'package:personal_pro_site/modules/app_widget.dart';
 
 void main() {
-  runApp(const ProWebSite());
-}
-
-class ProWebSite extends StatelessWidget {
-  const ProWebSite({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ProWebSite',
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    );
-  }
+  runApp(
+    ModularApp(
+      module: AppModule(),
+      child: const AppWidget(),
+    ),
+  );
 }

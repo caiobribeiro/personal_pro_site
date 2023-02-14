@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:personalism/src/effects/glass_box_effect.dart';
 
 class ProBottomBar extends StatefulWidget {
-  const ProBottomBar({super.key});
+  final void Function(int index) onIndexSelected;
+  const ProBottomBar({
+    super.key,
+    required this.onIndexSelected,
+  });
 
   @override
   State<ProBottomBar> createState() => _ProBottomBarState();
@@ -41,6 +45,7 @@ class _ProBottomBarState extends State<ProBottomBar> {
           currentIndex: _selected,
           onTap: (index) {
             setState(() {
+              widget.onIndexSelected(index);
               _selected = index;
             });
           },
